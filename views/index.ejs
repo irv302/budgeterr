@@ -6,9 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/skeleton.css" />
-    <title>Document</title>
+    <title>Homepage</title>
 </head>
 <body>
-    
+    <style>
+        body{
+            background-image: url(https://wallpaperaccess.com/full/2825731.gif);
+            background-repeat: no-repeat;
+            background-position: auto;
+        }
+        h1{
+            color: whitesmoke;
+        
+        }
+        td{
+            color: lightcyan;
+        }
+
+    </style>
+    <tr>
+        <div class="container">
+            <h1>Annual Budget</h1>
+            <td><% for (let i =0; i < budgetAll.length; i++) { %> </td>
+                <table>
+                    <p>
+                        <td><%= budgetAll.date %></td>
+                        <td><a href="/budgeT/<%= i %>"> <%= budgetAll[i].name</a></td>
+                        <td> &128178 <%= budgetAll[i].smount %></td>
+                    
+                    </p>
+                    <% } %>
+                </table>
+        </div>
+    </tr>
 </body>
 </html>
