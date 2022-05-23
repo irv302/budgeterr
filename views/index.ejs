@@ -10,29 +10,26 @@
 </head>
 <body>
     <style>
-        body{
-            background-image: url(https://wallpaperaccess.com/full/2825731.gif);
-            background-repeat: no-repeat;
-            background-position: auto;
-        }
+      
         h1{
-            color: whitesmoke;
+            color: rgb(116, 99, 99);
         
         }
         td{
-            color: lightcyan;
+            color: rgb(176, 232, 232);
         }
 
     </style>
     <tr>
         <div class="container">
             <h1>Annual Budget</h1>
+        
             <td><% for (let i =0; i < budgetAll.length; i++) { %> </td>
                 <table>
                     <p>
                         <td><%= budgetAll.date %></td>
                         <td><a href="/budgeT/<%= i %>"> <%= budgetAll[i].name</a></td>
-                        <td> &128178 <%= budgetAll[i].smount %></td>
+                        <td> &128178 <%= budgetAll[i].amount %></td>
                     
                     </p>
                     <% } %>
