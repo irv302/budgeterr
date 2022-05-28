@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/skeleton.css" />
     <title>Homepage</title>
-</head>
-<body>
+  </head>
+  <body>
     <style>
-      
-        h1{
-            color: rgb(116, 99, 99);
-        
-        }
-        td{
-            color: rgb(176, 232, 232);
-        }
-
+      h1 {
+        color: rgb(116, 99, 99);
+      }
+      td {
+        color: rgb(176, 232, 232);
+      }
     </style>
     <tr>
-        <div class="container">
-            <h1>Annual Budget</h1>
-        
-            <td><% for (let i =0; i < budgetAll.length; i++) { %> </td>
-                <table>
-                    <p>
-                        <td><%= budgetAll.date %></td>
-                        <td><a href="/budgeT/<%= i %>"> <%= budgetAll[i].name</a></td>
-                        <td> &128178 <%= budgetAll[i].amount %></td>
-                    
-                    </p>
-                    <% } %>
-                </table>
-        </div>
+      <div class="container">
+        <h1>Annual Budget</h1>
+
+        <h3>Bank account:</h3>
+
+        <a href="/budgets/new">New Item</a>
+
+        <td><% for (let index =0; index < budgetAll.length; index++) { %></td>
+
+        <table>
+          <p>
+            <td><%= budgetAll.date %></td>
+
+            <td>
+              <a href="/budgets/<%= index %>"> <%= budgetAll[index].name; %> </a>
+            </td>
+
+            <td><%= budgetAll[index].amount; %></td>
+          </p>
+          <% } %>
+        </table>
+      </div>
     </tr>
-</body>
+  </body>
 </html>

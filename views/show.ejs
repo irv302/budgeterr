@@ -21,30 +21,31 @@
     </style>
    
         <div class="container">
-            <h1><% budgetAll.name %></h1>
-   <table>
+            <h1><%= budgetAll.name %> </h1>
+
+               <a href="/budgets/"><button>Home</button></a>
        
-    <tr>
-        <td> <p>&#128060 date &#128060</p> </td>
-        <td> <%= budgetAll.date %> </td>
-    </tr>
-    <tr>
-        <td> <p>&#128060 date &#128060</p> </td>
-        <td> <%= budgetAll.date %> </td>
-    </tr>
-    <tr>
-        <td> <p>&#128060 date &#128060</p> </td>
-        <td> <%= budgetAll.date %> </td>
-    </tr>
-    <tr>
-        <td> <p>&#128060 date &#128060</p> </td>
-        <td> <%= budgetAll.date %> </td>
-    </tr>
-    <tr>
-        <td> <p>&#128060 date &#128060</p> </td>
-        <td> <%= budgetAll.date %> </td>
-    </tr>
-   </table>
-   ,<a href="/budgets/"><button>Home</button></a>
+            <p><strong>date</strong></p>
+            <p>
+                <%= budgetAll.date %>
+            </p>
+            <p><strong>name</strong></p>
+            <p>
+                <%= budgetAll.name %>
+            </p>
+            <p><strong>form</strong></p>
+            <p>
+                <%= budgetAll.form %>
+            </p>
+            <p><strong>amount</strong></p>
+            <p>
+                <%= budgetAll.amount %>
+            </p>
+            <p><strong>tags</strong></p>
+            <p>
+                <%= budgetAll.tags %>
+            </p>
+
+
 </body>
 </html>
